@@ -12,9 +12,9 @@ locals {
 }
 
 provider "yandex" {
-  service_account_key_file = "/work/key.json"
-  cloud_id                 = "b1g71e95h51okii30p25"
-  folder_id                = "b1gbk2v7cro1t1dboen8"
+  service_account_key_file = "key.json"
+  cloud_id               = var.cloud_id
+  folder_id              = var.folder_id
   zone                     = "ru-central1-a"
 }
 

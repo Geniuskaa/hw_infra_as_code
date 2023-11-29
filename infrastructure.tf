@@ -26,6 +26,10 @@ resource "yandex_message_queue" "msg-queue" {
 resource "yandex_ydb_database_serverless" "db" {
   name = "${var.user}-db-photo-face"
   location_id = "ru-central1"
+  
+  serverless_database {
+    storage_size_limit = 5
+  }
 }
 
 resource "yandex_ydb_table" "db-table" {
